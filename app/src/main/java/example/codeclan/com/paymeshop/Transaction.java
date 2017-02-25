@@ -1,8 +1,42 @@
 package example.codeclan.com.paymeshop;
 
-/**
- * Created by user on 24/02/2017.
- */
+import java.util.ArrayList;
 
 public class Transaction {
+    private TransactionType saleType;
+    private Payable payment;
+    private ArrayList<String> stockBought;
+    private Double total;
+
+
+    public Transaction(TransactionType saleType, Payable payment, Double total){
+        this.saleType = saleType;
+        this.payment = payment;
+        this.stockBought = new ArrayList<String>();
+        this.total = total;
+    }
+
+    public TransactionType getSaleType() {
+        return saleType;
+    }
+
+    public void setSaleType(TransactionType saleType) {
+        this.saleType = saleType;
+    }
+
+    public Payable getPayment() {
+        return payment;
+    }
+
+    public void setPayment(Payable payment) {
+        this.payment = payment;
+    }
+
+    public Double getTotal() {
+        return total;
+    }
+
+    public void setTotal(Double total) {
+        this.total = total;
+    }
 }
