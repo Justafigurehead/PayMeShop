@@ -4,14 +4,16 @@ import java.util.ArrayList;
 
 public class Transaction {
     private TransactionType saleType;
+    private Customer customer;
     private Payable payment;
     private ArrayList<String> stockBought;
     private Double total;
 
 
-    public Transaction(TransactionType saleType, Payable payment, Double total){
+    public Transaction(TransactionType saleType, Payable payment, Customer customer, Double total){
         this.saleType = saleType;
         this.payment = payment;
+        this.customer = customer;
         this.stockBought = new ArrayList<String>();
         this.total = total;
     }

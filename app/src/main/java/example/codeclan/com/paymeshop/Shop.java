@@ -25,4 +25,22 @@ public class Shop {
     public Double getStockValue(String key){
         return stock.get(key);
     }
+
+    public void addNewTransaction(Transaction value){
+        transactions.add(value);
+        this.numOfSales ++;
+    }
+
+    public int getNumOfSales() {
+        return numOfSales;
+    }
+
+    public int getTransactionSize(){
+        return transactions.size();
+    }
+
+    public Double getTotalProfits(Double transTotal){
+        this.totalProfits += transTotal;
+    }
+
 }

@@ -9,20 +9,26 @@ import org.junit.Test;
 public class ShopTest {
 
     private Shop shop;
+    private Customer customer;
+
     @Before
     public void before(){
         shop = new Shop();
+        shop.addKeyValueToStock("television", 100.0);
+        customer = new Customer("Michaela");
     }
 
     @Test
     public void testCanAddStockAndPriceToHashAndReturnValue(){
-        shop.addKeyValueToStock("television", 100.0);
         assertEquals(100.0, shop.getStockValue("television"), 0.01);
     }
 
     @Test
-    public void testMakeASale(){
-        Transaction transactionOne = new Transaction(TransactionType.SALE, )
+    public void testCustomerFundsGoDown(){
+        Payable creditCard = customer.getCreditCard();
+        Transaction transactionOne = new Transaction(TransactionType.SALE, creditCard, customer, shop.getStockValue("television"));
+        assertEquals();
+
     }
 
 }

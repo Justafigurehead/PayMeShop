@@ -12,6 +12,14 @@ public class Customer {
     public Customer(String name){
        this.name = name;
        this.payments = new HashMap<String, Payable>();
+        creditCard = new CreditCard(500.00);
         payments.put("CreditCard", creditCard);
     }
+
+    public Payable getCreditCard(){
+        Payable creditCard = payments.get("CreditCard");
+        return creditCard;
+    }
+
+
 }
