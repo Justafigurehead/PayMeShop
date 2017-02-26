@@ -1,5 +1,6 @@
 package example.codeclan.com.paymeshop;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Shop {
@@ -7,10 +8,12 @@ public class Shop {
     private int numOfSales;
     private double totalProfits;
     private HashMap<String, Double> stock;
+    private ArrayList<Transaction> transactions;
 
     public Shop(){
         this.numOfSales = 0;
         this.totalProfits = 0;
+        this.transactions = new ArrayList<Transaction>();
         this.stock = new HashMap <String, Double>();
     }
 

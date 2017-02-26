@@ -20,6 +20,9 @@ public class ShopTest {
         assertEquals(100.0, shop.getStockValue("television"), 0.01);
     }
 
-
+    @Test
+    public void testMakeASale(){
+        Transaction transactionOne = new Transaction(TransactionType.SALE, )
+    }
 
 }
